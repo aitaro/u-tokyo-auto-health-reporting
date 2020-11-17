@@ -23,13 +23,13 @@ if not password:
 destination_str = config.get('destination')
 destination = None
 if destination_str == 'hongo':
-    destination = '本郷地区／Hongo Area'
+    destination = 0
 elif destination_str == 'komaba':
-    destination = '駒場Ⅱ地区／KomabaⅡ Area　'
+    destination = 1
 elif destination_str == 'kashiwa':
-    destination = '柏地区／Kashiwa Area'
+    destination = 2
 elif destination_str == 'other':
-    destination = 'その他／Other Campus'
+    destination = 3
 else:
     raise ValueError('invalid destination')
 
@@ -55,22 +55,16 @@ time.sleep(10)
 driver.find_element_by_css_selector(
     "input[aria-label='ECCSクラウドメール(共通ID@g.ecc.u-tokyo.ac.jp)宛に送信']").click()
 time.sleep(2)
-debug = driver.find_elements_by_css_selector("input[type='checkbox']")
-debug[0].click()
-for i in debug:
-    print(i.get_attribute('value'))
-time.sleep(2)
-# なぜか失敗する
-# driver.find_element_by_css_selector(
-#     f"input[aria-label='{destination}']").click()
+driver.find_elements_by_css_selector("input[type='checkbox']")[
+    destination].click()
 time.sleep(2)
 driver.find_element_by_css_selector(
     "input[maxlength='4000']").send_keys(stay)
-
+time.sleep(2)
 driver.find_elements_by_css_selector("input[type='radio']")[2].click()
 time.sleep(5)
 driver.find_elements_by_css_selector("input[type='radio']")[6].click()
-# driver.find_element_by_css_selector("button[title='送信']").click()
+driver.find_element_by_css_selector("button[title='送信']").click()
 
 
 driver.quit()
