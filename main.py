@@ -1,5 +1,4 @@
 from selenium import webdriver
-import chromedriver_binary
 import yaml
 import os
 import time
