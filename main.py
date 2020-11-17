@@ -54,11 +54,14 @@ driver.find_element_by_id("idBtn_Back").click()
 time.sleep(10)
 driver.find_element_by_css_selector(
     "input[aria-label='ECCSクラウドメール(共通ID@g.ecc.u-tokyo.ac.jp)宛に送信']").click()
+time.sleep(2)
 debug = driver.find_elements_by_css_selector("input[type='checkbox']")
 for i in debug:
     print(i.get_attribute('value'))
+time.sleep(2)
 driver.find_element_by_css_selector(
     f"input[aria-label='{destination}']").click()
+time.sleep(2)
 driver.find_element_by_css_selector(
     "input[placeholder='回答を入力してください']").send_keys(stay)
 
