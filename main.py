@@ -69,7 +69,7 @@ driver.find_element_by_css_selector(
 
 driver.find_elements_by_css_selector("input[type='radio']")[2].click()
 time.sleep(5)
-driver.find_element_by_css_selector("input[aria-label='いいえ／No']").click()
+driver.find_elements_by_css_selector("input[type='radio']")[6].click()
 # driver.find_element_by_css_selector("button[title='送信']").click()
 
 
