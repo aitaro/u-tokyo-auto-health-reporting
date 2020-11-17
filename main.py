@@ -6,26 +6,6 @@ from fake_useragent import UserAgent
 from selenium.webdriver.chrome.options import Options
 
 
-# chrome_options = webdriver.ChromeOptions()
-
-# chrome_options.add_argument('--headless')
-# chrome_options.add_argument('--disable-gpu')
-# # chrome_options.add_argument('--window-size=1280x1696')
-# chrome_options.add_argument('--no-sandbox')
-# # chrome_options.add_argument('--hide-scrollbars')
-# # chrome_options.add_argument('--enable-logging')
-# # chrome_options.add_argument('--log-level=0')
-# # chrome_options.add_argument('--v=99')
-# chrome_options.add_argument('--single-process')
-# chrome_options.add_argument('--ignore-certificate-errors')
-# chrome_options.add_argument('--disable-dev-shm-usage')
-# # chrome_options.add_argument('--remote-debugging-port=9222')
-# chrome_options.add_argument('user-agent='+UserAgent().random)
-
-# chrome_options.binary_location = os.getcwd() + "/headless-chromium"
-# driver = webdriver.Chrome(os.getcwd() + "/chromedriver",
-#                           options=chrome_options)
-
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 driver = webdriver.Chrome(options=chrome_options)
@@ -74,6 +54,9 @@ driver.find_element_by_id("idBtn_Back").click()
 time.sleep(3)
 driver.find_element_by_css_selector(
     "input[aria-label='ECCSクラウドメール(共通ID@g.ecc.u-tokyo.ac.jp)宛に送信']").click()
+debug = driver.find_elements_by_css_selector("input[type='checkbox']")
+for i in debug:
+    print(i.get_attribute('value'))
 driver.find_element_by_css_selector(
     f"input[aria-label='{destination}']").click()
 driver.find_element_by_css_selector(
