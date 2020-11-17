@@ -67,8 +67,7 @@ time.sleep(2)
 driver.find_element_by_css_selector(
     "input[maxlength='4000']").send_keys(stay)
 
-driver.find_element_by_css_selector(
-    "input[aria-label='37.0度未満／Less than 37.0 degrees Celsius']").click()
+driver.find_elements_by_css_selector("input[type='radio']")[2].click()
 time.sleep(5)
 driver.find_element_by_css_selector("input[aria-label='いいえ／No']").click()
 # driver.find_element_by_css_selector("button[title='送信']").click()
