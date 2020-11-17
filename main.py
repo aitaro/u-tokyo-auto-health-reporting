@@ -65,7 +65,7 @@ time.sleep(2)
 #     f"input[aria-label='{destination}']").click()
 time.sleep(2)
 driver.find_element_by_css_selector(
-    "input[placeholder='回答を入力してください']").send_keys(stay)
+    "input[maxlength='4000']").send_keys(stay)
 
 driver.find_element_by_css_selector(
     "input[aria-label='37.0度未満／Less than 37.0 degrees Celsius']").click()
