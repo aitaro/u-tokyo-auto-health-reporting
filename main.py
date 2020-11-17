@@ -17,6 +17,7 @@ chrome_options.add_argument('--log-level=0')
 chrome_options.add_argument('--v=99')
 chrome_options.add_argument('--single-process')
 chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('user-agent='+UserAgent().random)
 
 chrome_options.binary_location = os.getcwd() + "/headless-chromium"
