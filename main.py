@@ -60,6 +60,7 @@ debug[0].click()
 for i in debug:
     print(i.get_attribute('value'))
 time.sleep(2)
+# なぜか失敗する
 # driver.find_element_by_css_selector(
 #     f"input[aria-label='{destination}']").click()
 time.sleep(2)
