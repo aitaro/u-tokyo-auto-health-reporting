@@ -21,7 +21,7 @@ chrome_options.add_argument('user-agent='+UserAgent().random)
 
 chrome_options.binary_location = os.getcwd() + "/headless-chromium"
 driver = webdriver.Chrome(os.getcwd() + "/chromedriver",
-                          chrome_options=chrome_options)
+                          options=chrome_options)
 
 # main
 config = yaml.safe_load(open('config.yaml').read())
