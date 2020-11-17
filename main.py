@@ -58,7 +58,7 @@ if not stay:
     raise ValueError('invalid stay')
 
 # Chromeで操作する場合
-driver = webdriver.Chrome(executable_path='chromedriver')
+# driver = webdriver.Chrome(executable_path='chromedriver')
 driver.get('https://forms.office.com/Pages/ResponsePage.aspx?id=T6978HAr10eaAgh1yvlMhF__kSldrNpNvIWhwdsjjRJURUZEVjlIWjM1VjhXMlVaRVJaWVpEVjJZVCQlQCN0PWcu')
 time.sleep(3)
 driver.find_element_by_name("loginfmt").send_keys(email)
