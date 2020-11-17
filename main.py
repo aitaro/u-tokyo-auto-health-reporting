@@ -38,7 +38,7 @@ if not stay:
     raise ValueError('invalid stay')
 
 # Chromeで操作する場合
-# driver = webdriver.Chrome(executable_path='chromedriver')
+# 全体的に日本語で始まる値がうまいこといかない印象がある。
 driver.get('https://forms.office.com/Pages/ResponsePage.aspx?id=T6978HAr10eaAgh1yvlMhF__kSldrNpNvIWhwdsjjRJURUZEVjlIWjM1VjhXMlVaRVJaWVpEVjJZVCQlQCN0PWcu')
 time.sleep(10)
 driver.find_element_by_name("loginfmt").send_keys(email)
@@ -64,7 +64,7 @@ time.sleep(2)
 driver.find_elements_by_css_selector("input[type='radio']")[2].click()
 time.sleep(5)
 driver.find_elements_by_css_selector("input[type='radio']")[6].click()
-driver.find_element_by_css_selector("button[title='送信']").click()
+driver.find_element_by_css_selector("button.__submit-button__").click()
 
 
 driver.quit()
