@@ -40,18 +40,18 @@ if not stay:
 # Chromeで操作する場合
 # driver = webdriver.Chrome(executable_path='chromedriver')
 driver.get('https://forms.office.com/Pages/ResponsePage.aspx?id=T6978HAr10eaAgh1yvlMhF__kSldrNpNvIWhwdsjjRJURUZEVjlIWjM1VjhXMlVaRVJaWVpEVjJZVCQlQCN0PWcu')
-time.sleep(5)
+time.sleep(10)
 driver.find_element_by_name("loginfmt").send_keys(email)
 driver.find_element_by_id("idSIButton9").click()
 
-time.sleep(5)
+time.sleep(10)
 driver.find_element_by_name("Password").send_keys(password)
 driver.find_element_by_id("submitButton").click()
 
-time.sleep(5)
+time.sleep(10)
 driver.find_element_by_id("idBtn_Back").click()
 
-time.sleep(5)
+time.sleep(10)
 driver.find_element_by_css_selector(
     "input[aria-label='ECCSクラウドメール(共通ID@g.ecc.u-tokyo.ac.jp)宛に送信']").click()
 debug = driver.find_elements_by_css_selector("input[type='checkbox']")
@@ -64,7 +64,7 @@ driver.find_element_by_css_selector(
 
 driver.find_element_by_css_selector(
     "input[aria-label='37.0度未満／Less than 37.0 degrees Celsius']").click()
-time.sleep(2)
+time.sleep(5)
 driver.find_element_by_css_selector("input[aria-label='いいえ／No']").click()
 # driver.find_element_by_css_selector("button[title='送信']").click()
 
