@@ -3,7 +3,7 @@ name: Scheduler
 # https://help.github.com/en/github/automating-your-workflow-with-github-actions/events-that-trigger-workflows#scheduled-events-schedule
 on:
   schedule:
-    - cron: "2 ２２ * * *" # UTC時間であることに注意
+    - cron: "2 22 * * *" # UTC時間であることに注意
   # push:
   #   branches: [main]
 
