@@ -4,6 +4,7 @@ name: Scheduler
 on:
   schedule:
     - cron: "2 22 * * *" # UTC時間であることに注意
+  workflow_dispatch: true
   # push:
   #   branches: [main]
 
