@@ -11,8 +11,10 @@
 
 ## 使い方
 1. このリポジトリをフォークする。
-2. [Secrets](https://github.com/aitaro/u-tokyo-auto-health-reporting/settings/secrets/actions)にログイン時に必要なEMAILとPASSWORDを設定する。
-3. [Optional]送信日時を設定する。(デフォルト値は毎日7時2分です。)
+2. Settings > Secretsにログイン時に必要なEMAILとPASSWORDを設定する。
+3. github actions のworkflowが有効になっていることを確認する。
+4. [Optional]手動で送信テストする。(Actions > Scheduler)
+5. [Optional]送信日時を設定する。(デフォルト値は毎日7時2分です。)
 
 ## 制約
 現状、デフォルトメールにしか送れません。
