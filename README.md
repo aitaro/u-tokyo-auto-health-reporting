@@ -11,7 +11,7 @@
 
 ## 使い方
 1. このリポジトリをフォークする。
-2. Settings > Secretsにログイン時に必要なEMAILとPASSWORDを設定する。
+2. Settings > Secretsにログイン時に必要なEMAILとPASSWORDを設定する。(以下の２つを新しいsecretとして追加する)
     - Name：EMAIL、 Value:(ログインに使うメールアドレス)
     - Name：PASSWORD、 Value:(ログインに使うパスワード)
 3. github actions のworkflowが有効になっていることを確認する。
