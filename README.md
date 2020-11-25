@@ -12,6 +12,8 @@
 ## 使い方
 1. このリポジトリをフォークする。
 2. Settings > Secretsにログイン時に必要なEMAILとPASSWORDを設定する。
+  - Name：EMAIL、 Value:(ログインに使うメールアドレス)
+  - Name：PASSWORD、 Value:(ログインに使うパスワード)
 3. github actions のworkflowが有効になっていることを確認する。
 4. [Optional]手動で送信テストする。(Actions > Scheduler)
 5. [Optional]送信日時を設定する。(デフォルト値は毎日7時2分です。)
