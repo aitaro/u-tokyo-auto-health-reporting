@@ -20,5 +20,5 @@
 現状、デフォルトメールにしか送れません。
 
 
-## Contoribution
+## Contribution
 大歓迎です。issueや pull request を投げてください。
